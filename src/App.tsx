@@ -113,11 +113,11 @@ function HomePage({ onNavigate, showToast }: { onNavigate: (page: Page) => void;
     <img src={assetUrl('assets/brand/gr-green-tech.png')} alt="GR Green Tech 国锐科技" className="pointer-events-none absolute left-[153px] top-[36px] h-[54px] w-auto max-w-none select-none" />
     <div className="absolute left-[153px] top-[128px] h-[672px] w-[471px]">
       <div className="relative h-[130px] w-[471px] overflow-hidden rounded-[10px]" data-node-id="41:4085">
-        <img src={assetUrl('assets/figma/node-41-4085.png')} alt="" className="pointer-events-none absolute left-[-153px] top-[-128px] h-[800px] w-[1280px] max-w-none select-none" />
+        <img src={assetUrl('assets/figma/node-41-4085.avif')} alt="" className="pointer-events-none absolute left-[-153px] top-[-128px] h-[800px] w-[1280px] max-w-none select-none" />
         <span className="sr-only">15:19，11月5号星期日，北京市朝阳区，小雨，5至12度</span>
       </div>
       <div className="absolute left-0 top-[145px] h-20 w-[471px] overflow-hidden rounded-[10px]" data-node-id="41:4085-music">
-        <img src={assetUrl('assets/figma/node-41-4085.png')} alt="" className="pointer-events-none absolute left-[-153px] top-[-273px] h-[800px] w-[1280px] max-w-none select-none" />
+        <img src={assetUrl('assets/figma/node-41-4085.avif')} alt="" className="pointer-events-none absolute left-[-153px] top-[-273px] h-[800px] w-[1280px] max-w-none select-none" />
         <span aria-hidden className="absolute bottom-0 left-[354px] h-[12px] w-[38px] bg-[#4a5459]" />
         <span className="sr-only">音乐播放控制</span>
       </div>
@@ -194,7 +194,7 @@ function IncomingCallSimulation({ onClose, showToast }: { onClose: () => void; s
           </div>
           <span className={`rounded-full px-3 py-1.5 text-[11px] ${callState === 'incoming' ? 'bg-accent/12 text-accent' : 'border border-aqua/30 bg-[rgba(44,75,76,.58)] text-white/82'}`}>{callState === 'incoming' ? '呼入中' : '已接通'}</span>
         </div>
-        <div className="relative h-[430px] overflow-hidden rounded-[10px] bg-[#172129] bg-cover bg-center shadow-[0_10px_28px_rgba(0,0,0,.22)]" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,.04),rgba(0,0,0,.16)),url('${assetUrl('assets/intercom/unit-door-1.png')}')` }}>
+        <div className="relative h-[430px] overflow-hidden rounded-[10px] bg-[#172129] bg-cover bg-center shadow-[0_10px_28px_rgba(0,0,0,.22)]" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,.04),rgba(0,0,0,.16)),url('${assetUrl('assets/intercom/unit-door-1.avif')}')` }}>
           <span className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-[rgba(18,29,35,.70)] px-3 py-2 text-[11px] text-white/78 backdrop-blur-[18px]"><Video size={14} className="text-aqua" /><StatusDot />实时画面</span>
         </div>
         <div className="flex h-[82px] items-end justify-center gap-4 pb-1">
@@ -262,18 +262,18 @@ function IntercomPage({ onBack, showToast, armed, onDefense }: { onBack: () => v
     }, 900)
   }
   const records = tab === 'call' ? callRecords : doorRecords
-  return <section className="absolute inset-0 z-30 bg-cover bg-center px-5 pb-5 pt-20" style={{ backgroundImage: `linear-gradient(rgba(13,20,28,.70),rgba(0,5,9,.76)),url('${assetUrl('assets/figma/raw-1.png')}')` }}>
+  return <section className="absolute inset-0 z-30 bg-cover bg-center px-5 pb-5 pt-20" style={{ backgroundImage: `linear-gradient(rgba(13,20,28,.70),rgba(0,5,9,.76)),url('${assetUrl('assets/figma/raw-1.avif')}')` }}>
     <PageHeader title="可视对讲" onBack={onBack} armed={armed} onDefense={onDefense} />
     <div className="grid h-[700px] grid-cols-[170px_minmax(0,1fr)_275px] gap-3.5">
       <aside className={`${detailGlass} p-4`}>
         <h2 className="mb-[18px] text-[17px] font-semibold tracking-[.2px]">监控列表</h2>
-        {(['door','garage'] as Camera[]).map((item) => <button key={item} type="button" aria-pressed={camera === item} onClick={() => setCamera(item)} className={`relative mb-3 h-[96px] w-full overflow-hidden rounded-[10px] border bg-cover bg-center text-left transition duration-150 hover:brightness-110 active:scale-[.985] ${camera === item ? 'border-accent shadow-[0_0_0_1px_rgba(255,120,67,.18),0_8px_18px_rgba(0,0,0,.16)]' : 'border-transparent'}`} style={{ backgroundImage: `linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.58)),url('${assetUrl(`assets/intercom/${item === 'door' ? 'unit-door-1.png' : 'unit-door-2.png'}`)}')` }}>
+        {(['door','garage'] as Camera[]).map((item) => <button key={item} type="button" aria-pressed={camera === item} onClick={() => setCamera(item)} className={`relative mb-3 h-[96px] w-full overflow-hidden rounded-[10px] border bg-cover bg-center text-left transition duration-150 hover:brightness-110 active:scale-[.985] ${camera === item ? 'border-accent shadow-[0_0_0_1px_rgba(255,120,67,.18),0_8px_18px_rgba(0,0,0,.16)]' : 'border-transparent'}`} style={{ backgroundImage: `linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.58)),url('${assetUrl(`assets/intercom/${item === 'door' ? 'unit-door-1.avif' : 'unit-door-2.avif'}`)}')` }}>
           <span className="absolute inset-x-0 bottom-0 flex h-10 items-center justify-between px-2.5 text-[13px] font-medium"><span>{item === 'door' ? '单元门口机一' : '单元门口机二'}</span>{camera === item && <span className="text-[10px] font-normal text-aqua">当前</span>}</span>
         </button>)}
       </aside>
       <main className={`${detailGlass} flex min-w-0 flex-col p-4`}>
         <div className="mb-3 flex h-[40px] shrink-0 items-center justify-center gap-2.5 text-[17px] font-semibold"><span className="leading-none">{cameraName}</span><span className="inline-flex items-center gap-1.5 rounded-full border border-aqua/30 bg-[rgba(44,75,76,.58)] px-2.5 py-1.5 text-[11px] font-normal leading-none text-white/82 shadow-[inset_0_1px_0_rgba(255,255,255,.06),0_0_10px_rgba(101,238,227,.08)]"><StatusDot />在线</span></div>
-        <div className="relative min-h-0 flex-1 overflow-hidden rounded-[10px] bg-[#172129] bg-cover bg-center shadow-[0_10px_28px_rgba(0,0,0,.18)]" style={{ backgroundImage: `url('${assetUrl(`assets/intercom/${camera === 'door' ? 'unit-door-1.png' : 'unit-door-2.png'}`)}')` }}>
+        <div className="relative min-h-0 flex-1 overflow-hidden rounded-[10px] bg-[#172129] bg-cover bg-center shadow-[0_10px_28px_rgba(0,0,0,.18)]" style={{ backgroundImage: `url('${assetUrl(`assets/intercom/${camera === 'door' ? 'unit-door-1.avif' : 'unit-door-2.avif'}`)}')` }}>
           <span className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-[rgba(18,29,35,.70)] px-3 py-2 text-[11px] text-white/78 backdrop-blur-[18px]"><Video size={14} className="text-aqua" /><StatusDot />实时监控</span>
         </div>
         <button type="button" disabled={doorState === 'sending'} onClick={() => setConfirmOpen(true)} className={`mx-auto mt-4 h-[48px] min-w-[152px] rounded-full px-8 text-[17px] font-medium text-white shadow-[0_8px_20px_rgba(0,0,0,.22)] transition hover:-translate-y-0.5 hover:brightness-110 active:translate-y-0 active:scale-[.98] disabled:cursor-wait ${doorState === 'success' ? 'bg-[#20a979]' : doorState === 'sending' ? 'bg-[#5c6d76]' : 'bg-accent'}`}>{doorState === 'success' ? '已开门' : doorState === 'sending' ? '指令发送中…' : '开门'}</button>
@@ -294,18 +294,18 @@ function AngelPage({ onBack, armed, onDefense }: { onBack: () => void; armed: bo
   const [zone, setZone] = useState<1 | 2>(1)
   const [fullscreen, setFullscreen] = useState(false)
   const zoneName = zone === 1 ? '区域一 · 儿童活动区' : '区域二 · 社区健身区'
-  return <section className="absolute inset-0 z-30 bg-cover bg-center px-5 pb-5 pt-20" style={{ backgroundImage: `linear-gradient(rgba(13,20,28,.70),rgba(0,5,9,.76)),url('${assetUrl('assets/figma/raw-1.png')}')` }}>
+  return <section className="absolute inset-0 z-30 bg-cover bg-center px-5 pb-5 pt-20" style={{ backgroundImage: `linear-gradient(rgba(13,20,28,.70),rgba(0,5,9,.76)),url('${assetUrl('assets/figma/raw-1.avif')}')` }}>
     <PageHeader title="天使之眼" onBack={onBack} armed={armed} onDefense={onDefense} />
     <div className={`grid h-[700px] gap-3.5 ${fullscreen ? 'grid-cols-1' : 'grid-cols-[180px_minmax(0,1fr)]'}`}>
       {!fullscreen && <aside className={`${detailGlass} p-4`}>
         <h2 className="mb-[18px] text-[17px] font-semibold tracking-[.2px]">监控区域</h2>
-        {([1,2] as const).map((item) => <button key={item} type="button" aria-pressed={zone === item} onClick={() => setZone(item)} className={`relative mb-3 h-[96px] w-full overflow-hidden rounded-[10px] border bg-cover bg-center text-left transition duration-150 hover:brightness-110 active:scale-[.985] ${zone === item ? 'border-accent shadow-[0_0_0_1px_rgba(255,120,67,.18),0_8px_18px_rgba(0,0,0,.16)]' : 'border-transparent'}`} style={{ backgroundImage: `linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.58)),url('${assetUrl(`assets/figma/${item === 1 ? 'raw-2.jpeg' : 'raw-3.jpeg'}`)}')` }}>
+        {([1,2] as const).map((item) => <button key={item} type="button" aria-pressed={zone === item} onClick={() => setZone(item)} className={`relative mb-3 h-[96px] w-full overflow-hidden rounded-[10px] border bg-cover bg-center text-left transition duration-150 hover:brightness-110 active:scale-[.985] ${zone === item ? 'border-accent shadow-[0_0_0_1px_rgba(255,120,67,.18),0_8px_18px_rgba(0,0,0,.16)]' : 'border-transparent'}`} style={{ backgroundImage: `linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.58)),url('${assetUrl(`assets/figma/${item === 1 ? 'raw-2.avif' : 'raw-3.avif'}`)}')` }}>
           <span className="absolute inset-x-0 bottom-0 flex h-10 items-center justify-between px-2.5"><span className="text-[13px] font-medium">区域{item === 1 ? '一' : '二'}</span><span className="inline-flex items-center gap-1.5 rounded-full bg-black/25 px-2 py-1 text-[10px] font-normal text-white/75"><StatusDot />在线</span></span>
         </button>)}
       </aside>}
       <main className={`${detailGlass} relative flex min-w-0 flex-col p-4`}>
         <div className="mb-3 flex h-[40px] shrink-0 items-center justify-center gap-2.5 text-[17px] font-semibold"><span className="leading-none">{zoneName}</span><span className="inline-flex items-center gap-1.5 rounded-full border border-aqua/30 bg-[rgba(44,75,76,.58)] px-2.5 py-1.5 text-[11px] font-normal leading-none text-white/82 shadow-[inset_0_1px_0_rgba(255,255,255,.06),0_0_10px_rgba(101,238,227,.08)]"><StatusDot />在线</span></div>
-        <div className="relative min-h-0 flex-1 overflow-hidden rounded-[10px] bg-[#172129] bg-cover bg-center shadow-[0_10px_28px_rgba(0,0,0,.18)]" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,.08),rgba(0,0,0,.16)),url('${assetUrl(`assets/figma/${zone === 1 ? 'raw-2.jpeg' : 'raw-3.jpeg'}`)}')` }}>
+        <div className="relative min-h-0 flex-1 overflow-hidden rounded-[10px] bg-[#172129] bg-cover bg-center shadow-[0_10px_28px_rgba(0,0,0,.18)]" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,.08),rgba(0,0,0,.16)),url('${assetUrl(`assets/figma/${zone === 1 ? 'raw-2.avif' : 'raw-3.avif'}`)}')` }}>
           <span className="absolute left-4 top-4 flex items-center gap-2 rounded-full bg-[rgba(18,29,35,.70)] px-3 py-2 text-[11px] text-white/78 backdrop-blur-[18px]"><Video size={14} className="text-aqua" /><StatusDot />实时监控</span>
         </div>
         <button type="button" aria-label={fullscreen ? '退出全屏' : '全屏查看'} onClick={() => setFullscreen((value) => !value)} className="absolute bottom-[30px] right-[30px] grid size-11 place-items-center rounded-[12px] border-0 bg-[rgba(44,59,67,.78)] text-white shadow-[0_8px_18px_rgba(0,0,0,.22)] backdrop-blur-[18px] transition hover:bg-accent active:scale-95">{fullscreen ? <Minimize2 size={22} /> : <Expand size={22} />}</button>
@@ -331,7 +331,7 @@ export default function App() {
     setDefenseConfirm(false)
     showToast(armed ? '八路防区已撤防' : '八路防区已开启')
   }
-  return <main className="relative mx-auto h-[800px] w-[1280px] overflow-hidden bg-cover bg-center text-[#f7f8f9]" style={{ backgroundImage: `linear-gradient(rgba(13,20,28,.70),rgba(0,5,9,.72)),url('${assetUrl('assets/figma/raw-1.png')}')` }}>
+  return <main className="relative mx-auto h-[800px] w-[1280px] overflow-hidden bg-cover bg-center text-[#f7f8f9]" style={{ backgroundImage: `linear-gradient(rgba(13,20,28,.70),rgba(0,5,9,.72)),url('${assetUrl('assets/figma/raw-1.avif')}')` }}>
     {page === 'home' && <><Sidebar /><TopActions armed={armed} onDefense={() => setDefenseConfirm(true)} onIntercomSimulation={() => setSimulation('intercom')} onSecuritySimulation={() => setSimulation('security')} /><HomePage onNavigate={setPage} showToast={showToast} /></>}
     {page === 'intercom' && <IntercomPage onBack={() => setPage('home')} showToast={showToast} armed={armed} onDefense={() => setDefenseConfirm(true)} />}
     {page === 'angel' && <AngelPage onBack={() => setPage('home')} armed={armed} onDefense={() => setDefenseConfirm(true)} />}
