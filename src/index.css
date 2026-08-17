@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  --color-accent: #ff7843;
+  --color-aqua: #65eee3;
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+  html, body, #root { min-width: 100%; min-height: 100%; margin: 0; }
+  body { display: grid; overflow: hidden; place-items: center; background: #111; color: #f7f8f9; font-family: var(--font-sans); }
+  button { cursor: pointer; }
+  button:focus-visible, [role="button"]:focus-visible { outline: 2px solid #5fd6ff; outline-offset: 3px; }
+}
+
+@keyframes pulse-success {
+  50% { box-shadow: 0 0 24px rgba(101, 238, 227, .42); }
+}
+
+.animate-success { animation: pulse-success 1s ease-in-out 4; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
